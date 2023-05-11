@@ -7,6 +7,7 @@ const Container = styled.div`
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    background-color: #F5F5F5;
 `;
 const Products = ({cat, filters, sort}) => {
 

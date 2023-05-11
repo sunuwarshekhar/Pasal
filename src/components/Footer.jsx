@@ -5,6 +5,8 @@ import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  color: #2e2e54;
+  background-color: #2E2E54;
   ${mobile({ flexDirection: "column"})}
 
 `;
@@ -12,16 +14,17 @@ const Container = styled.div`
 const Left = styled.div`
   flex:1;  
   padding: 20px;
-  ${mobile({ backgroundColor:"#f5f1f1"})}
+  /* ${mobile({ backgroundColor:"#f5f5f5"})} */
 
 `;
 
 const Logo = styled.h1`
-    
+    color:#f85606;
 `;
 
 const Desc = styled.p`
     margin: 20px 0px;
+    color:white
       
 `;
 
@@ -50,6 +53,7 @@ const Center = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 30px;
+  color:white;
 `;
 
 const List = styled.ul`
@@ -63,6 +67,7 @@ const List = styled.ul`
 const ListItem = styled.li`
   width:50%;
   margin-bottom: 10px;
+  color: white;
 `;
 const Right = styled.div`
     flex:1;
@@ -84,9 +89,7 @@ const Footer = () => {
       <Left>
         <Logo>PASAL</Logo>
         <Desc>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          voluptatem provident perferendis aspernatur vel ipsam, minus quibusdam
-          nam qui voluptate?
+          Pasal is a one-stop solution for all the goods to shop for in ecommerce world.
         </Desc>
         <SocialContainer>
           <SocialIcon color="385999">

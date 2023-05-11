@@ -8,7 +8,6 @@ import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import { useSelector } from "react-redux";
 function App() {
-  // const user = true;
   const user = useSelector((state) => state.user.currentUser);
   return (
     <BrowserRouter>

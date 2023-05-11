@@ -1,89 +1,58 @@
-import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Info = styled.div`
-    opacity:0%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top :0;
-    left: 0;
-    background-color: rgba(0,,0,0,0.2);
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    transition: all 0.5s ease;
+
+  transition: all 0.5s ease;
+  padding:16px;
 `;
 
 const Container = styled.div`
-  flex: 1;
   margin: 5px;
-  min-width: 280px;
-  height: 350px;
+  width: 180px;
+  height: 240px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color : lightgray;
-  position: relative;
-  &:hover ${Info}{
-    opacity:1;
+  &:hover ${Info} {
+    opacity: 1;
   }
+  flex-direction: column;
+  background-color: white;
 `;
 
-const Circle = styled.div`
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    position : absolute ;
-    background-color: white;
-
+const Wrapper = styled.div`
+   height: 70%;
+  width: 100%;
 `;
 const Image = styled.img`
-  height: 75%;
-  z-index: 2;
+  height: 100%;
+  width: 100%;
+   object-fit: cover;
 `;
 
-const Icon = styled.div`
-    width: 40px;
-    height: 40px;
-    border-radius:50%;
-    background-color: white;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    transition:all 0.5s ease ;
-    &:hover{
-        background-color: lightgreen;
-        transform: scale(1.1);
-    };
-    cursor: pointer;
+const Title = styled.p`
+  margin: 0px;
+  display: inline;
+`;
+const Price = styled.p`
+  color: #f85606;
+  margin: 0px;
+  font-weight: 500;
 `;
 
-
-const Product = ({item}) => {
+const Product = ({ item }) => {
+  const { img, title, price } = item;
   return (
     <Container>
-      <Circle />
-      <Image src={item.img} />
+      <Wrapper>
+      <Link  to={`/product/${item._id}`}>
+        <Image src={img} />
+      </Link>
+      </Wrapper>
       <Info>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-        <Icon >
-          <Link to={`/product/${item._id}`} >
-          <SearchOutlined />
-          </Link>
-        </Icon>
-        <Icon>
-          <FavoriteBorderOutlined />
-        </Icon>
+        <Link style={{display:"inline",textDecoration:"none"}} to={`/product/${item._id}`}>
+          <Title >{title}</Title>
+        </Link>
+        <Price>Rs.{price}</Price>
       </Info>
     </Container>
   );

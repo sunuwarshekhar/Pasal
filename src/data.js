@@ -8,7 +8,7 @@ export const sliderItems = [
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
+      img: "https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_960_720.jpg",
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fcf1ed",
@@ -16,7 +16,7 @@ export const sliderItems = [
     {
       id: 3,
       img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
+      title: "SLEEK LOOK",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       bg: "fbf0f4",
     },

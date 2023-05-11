@@ -7,7 +7,7 @@ const Container = styled.div`
     width:100%;  
     display: flex;
     flex-direction: column; 
-    background-color: #fcf5f5;
+    background-color: white;
     justify-content: center;
     align-items: center; 
     
@@ -42,6 +42,8 @@ const Input = styled.input`
     flex:8;
     padding-left: 20px;
     height: 100%;
+    outline: none;
+    background-color: #F5F5F5;
 `;
 
 const Button = styled.button`
